@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_position"
+        android:title="@string/menu_position"
+        android:icon="@drawable/gps"
+        android:orderInCategory="100" />
+	<item android:id="@+id/menu_share"
+        android:title="@string/menu_share"
+        android:icon="@drawable/compartir"
+        android:orderInCategory="100" />
+	<item android:id="@+id/menu_info"
+        android:title="@string/menu_info"
+        android:icon="@drawable/info"
+        android:orderInCategory="100" />
+</menu>

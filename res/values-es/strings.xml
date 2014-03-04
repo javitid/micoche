@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <string name="app_name">Mi coche</string>
+    <string name="title_activity_donde_esta_mi_coche">Mi coche</string>
+		
+		
+	<string name="centrar">YO</string>
+	<string name="spdl">COCHE</string>	
+	<string name="satellite_turn_on">Satélite ON</string>
+	<string name="satellite_turn_off">Satélite OFF</string>
+
+
+	<string name="data_altitude_yes">\nAltitud: %s metros</string>
+	<string name="data_altitude_no">\nAltitud: N/A</string>
+	<string name="data_my_position">\nLatitud: %1$s\nLongitud: %2$s %3$s\nProveedor: %4$s</string>
+	<string name="data_distance">Estás a %1$s metros del coche\nPrecisión: %2$s metros\n</string>
+
+
+	<string name="error_saving">Posición actual no disponible, no se puede guardar la posición del coche</string>
+	<string name="error_position">Posición actual no disponible</string>
+	<string name="error_connection">Conexión a la red no disponible</string>
+	<string name="error_gps">Necesita activar el GPS o la localización por redes inalámbricas</string>
+
+
+    <string name="menu_position">Mi posición</string>
+    <string name="menu_share">Compartir</string>
+    <string name="menu_info">Acerca de...</string>
+
+	<string name="position_title">Localización</string>
+	<string name="position_text">Distancia al coche:\n%1$s\nEl coche está en:\n%2$s\nTú estás en:\n%3$s</string>
+	<string name="position_copy">Texto copiado</string>
+	
+	<string name="share_subject">¿Dónde está mi coche?, te ayudará a encontrar tu coche cuando lo aparques en sitios desconocidos</string>
+	<string name="share_message">https://play.google.com/store/apps/details?id=com.latarce.location.dondeestamicoche</string>
+	<string name="share_chooser">Compartir ¿Dónde está mi coche?</string>
+	
+	<string name="about_title">¿Dónde está mi coche?</string>
+	<string name="about_text">\nDesarrollado por Javier García\njavi@latarce.com\nwww.android.latarce.com</string>
+	
+</resources>

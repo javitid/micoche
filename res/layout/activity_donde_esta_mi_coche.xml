@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+android:id="@+id/gps"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="4" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:id="@+id/btCenter"
+                style="@style/location_button"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:text="@string/centrar" />
+
+            <Button
+                android:id="@+id/btSPDLCenter"
+                style="@style/location_button"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:text="@string/spdl" />
+
+            <ToggleButton
+                android:id="@+id/btSatelite"
+                style="@style/location_toggle_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:textOff="@string/satellite_turn_off"
+                android:textOn="@string/satellite_turn_on" />
+
+            <Button
+                android:id="@+id/btSavePosition"
+                style="@style/location_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/save" />
+
+        </TableRow>
+    </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:layout_weight="1">
+
+            <com.google.android.maps.MapView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/myMapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:apiKey="0QiDXA5WTS7Iovk5ruprcniwvExcm_GbwHij6NQ"
+                android:clickable="true"
+                android:visibility="visible" >
+            </com.google.android.maps.MapView>
+
+            <Button
+                android:id="@+id/btInfo"
+                style="@style/overmap_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/info_mapa" />
+
+        </RelativeLayout>
+
+</LinearLayout>
