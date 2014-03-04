@@ -1,0 +1,5 @@
+<resources>
+	<color name="backgroundText">#08088A</color>
+	<color name="textColor">#ffffff</color>
+	<color name="textColorToggleButton">#0000ff</color>
+</resources>
