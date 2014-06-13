@@ -137,11 +137,20 @@ public class DondeActivity extends MapActivity implements OnClickListener{
 		mLocationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 		
 		//Obtenemos la última posición conocida (Si el proveedor está actualmente deshabilitado obtenemos un null pointer)
-		myLoc = mLocationManager.getLastKnownLocation(Context.LOCATION_SERVICE);
+		if (mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+			myLoc = mLocationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+		}
+		else if (mLocationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+			myLoc = mLocationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+		}
 		
     	//Mostramos la última posición conocida
-		if (myLoc != null)
+		//MostrarPosicionThread mostrarPosicionThread = new MostrarPosicionThread();
+		//mostrarPosicionThread.start();
+		if (myLoc != null){
 			mostrarPosicion();
+		}
+
     	
     	//Nos registramos para recibir actualizaciones de la posición
 		mLocationListener = new MyLocationListener();
@@ -168,7 +177,19 @@ public class DondeActivity extends MapActivity implements OnClickListener{
 			btSatelite.setChecked(false);
 		}
 	}
+    
+    class MostrarPosicionThread extends Thread{
+
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			super.run();
+			mostrarPosicion();
+		}
+    	
+    }
     */
+    
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_donde_esta_mi_coche, menu);
@@ -506,5 +527,4 @@ public class DondeActivity extends MapActivity implements OnClickListener{
 		    //super.drawCompass(canvas, bearing);
 		}
 	}
-    
 }
